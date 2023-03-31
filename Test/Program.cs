@@ -39,7 +39,7 @@ namespace Test
                 }
             }
 
-            //Normal para el rendimiento
+            //Normal Task para el rendimiento, usando una propiedad como almacenamiento de resultados
             await bank.CalculateGrowth(.10);
 
             //Aplicando Task<T> para el rendimiento
