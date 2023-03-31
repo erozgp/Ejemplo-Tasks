@@ -20,6 +20,7 @@ namespace Test
                 {
                     //await bank.Deposit(100);
 
+                    //TaskFactory implementando un proceso no async pero sí locked, que guarda la integridad de los datos
                     tasks.Add(Task.Factory.StartNew(() =>
                     {
                         bank.DepositLocked(100);
@@ -29,6 +30,8 @@ namespace Test
                 for(int k = 0; k < 1000; k++)
                 {
                     //await bank.Draw(50);
+
+                    //TaskFactory implementando un proceso no async pero sí locked, que guarda la integridad de los datos
                     tasks.Add(Task.Factory.StartNew(() =>
                     {
                         bank.DrawLocked(50);
